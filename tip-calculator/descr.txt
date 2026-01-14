@@ -1,0 +1,5 @@
+Nom du projet: Calculateur de pouboire.
+
+Description: Petite page ou un utilisateur peut entrer le montant total de sa facture dans un restaurant et le pourcentage de pourboire. Ensuite, il appuie un bouton et le pouboir qu'il doit donner sera afficher.
+
+Technos: HTML,
