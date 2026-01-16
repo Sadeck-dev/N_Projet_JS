@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.8);
+    padding: 20px;
+    background-color: rgb(97, 247, 97);
+}
+
+input {
+    border: none;
+    background-color: white;
+    height: 15px;
+}
+
+input:focus {
+    border: none;
+}
