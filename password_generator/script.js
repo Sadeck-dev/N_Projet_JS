@@ -1,6 +1,8 @@
 // DOM OPERATIONS
-const input = document.getElementById('password');
+const password = document.querySelector('.password');
 const generateBtn = document.getElementById('generateBtn');
+const copyBtn = document.getElementById('copyBtn');
+const error = document.querySelector('.error');
 
 function countFrequences(char = '') {
     if (typeof char !== 'string') return {
@@ -33,8 +35,7 @@ function countFrequences(char = '') {
     return result;
 }
 
-function generatePassword() {
-    const MIN = 12;
+function generatePassword(length) {
     const lower = 'abcdefghijklmnopqrstuvwxyz';
     const number = '0123456789';
     const upper = lower.toUpperCase();
@@ -47,12 +48,12 @@ function generatePassword() {
     do {
         password = '';
 
-        for (let i = 0; i < MIN; i++) {
+        for (let i = 0; i < length; i++) {
             const randomIndex = Math.floor(Math.random() * allChar.length);
             password += allChar[randomIndex];
         }
 
-        freq = countFrequences(password);
+        freq = countFrequences(password); 
 
     } while (
         freq.integer < 3 ||
@@ -63,5 +64,22 @@ function generatePassword() {
     return password;
 }
 
+generateBtn.addEventListener('click', () => {
+    const length = document.getElementById('length').value;
+    if (length < 12) {
+        error.textContent = "The minimal length is 12.";
+        return
+    }
+    error.textContent = ""
+    password.textContent = generatePassword(length);
+    })
 
-input.value = generatePassword();
+copyBtn.addEventListener('click', async () => {
+    try {
+        console.log(password.textContent);
+        await navigator.clipboard.writeText(password.textContent);
+        console.log('Mot de passe copié ✔');
+    } catch (err) {
+        console.error('Erreur de copie ❌', err);
+    }
+});
