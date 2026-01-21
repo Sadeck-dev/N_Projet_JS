@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 20px;
+    box-shadow: 2px 2px 2px 2px rgb(213, 208, 208);
+    text-align: center;
+    background: linear-gradient(to right, rgb(248, 59, 94), rgb(38, 0, 255));
+    color: white;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+button {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    border: none;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.start-btn {
+    background-color: green;
+}
+
+.pause-btn {
+    background-color: orange;
+}
+
+.reset-btn {
+    background-color: red;
+}
