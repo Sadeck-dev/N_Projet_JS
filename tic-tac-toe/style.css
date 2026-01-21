@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255, 0.6);
+    height: 100vh;
+}
+
+.container {
+    font-size: larger;
+    box-shadow: 3px 3px 3px 3px gray;
+    padding: 20px 40px;
+    text-align: center;
+}
+
+p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
